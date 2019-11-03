@@ -13,7 +13,7 @@ namespace ClusterClient.Actors
 			var mediator = DistributedPubSub.Get(Context.System).Mediator;
 			_logger.Info("Registering mediated receiver to mediator.");
 
-			mediator.Tell(new Put(Self), Self);
+			mediator.Tell(new Put(Self));
 			_logger.Info("Receiver registered with mediator.");
 
 			Receive<string>(message =>

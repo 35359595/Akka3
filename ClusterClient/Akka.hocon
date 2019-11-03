@@ -14,6 +14,6 @@ akka {
     }
     cluster {
         seed-nodes = ["akka.tcp://ClusterSys@localhost:4051"]
-        roles = []
+        roles = [listener]
     }
 }

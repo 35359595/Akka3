@@ -4,6 +4,7 @@ using ClusterClient.Actors;
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using Akka.Routing;
 
 namespace ClusterClient
 {
