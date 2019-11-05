@@ -1,6 +1,8 @@
 ## Example implementation of distributed Send of [Akka.net](https://getakka.net/)
 
-This is a basic implementation where `"/user/ping"` actor is been accessed from remote system directly.
+* This is a basic implementation where `"/user/ping"` actor is been accessed from remote system directly.
+
+* Cluster Singleton residing in nodes with one role is been accessed from node of different role.
 
 ### Known issues / missunderstandings
 * Actors deployed to cluster from configuration cannot be accessed through mediator's `Send()` message.
