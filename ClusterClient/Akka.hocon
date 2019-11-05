@@ -15,5 +15,10 @@ akka {
     cluster {
         seed-nodes = ["akka.tcp://ClusterSys@localhost:4051"]
         roles = [listener]
+        singleton-proxy {
+            singleton-name = "single"
+            role = "b"
+            buffer-size = 100
+        }
     }
 }

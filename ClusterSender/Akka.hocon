@@ -14,6 +14,18 @@ akka {
     }
     cluster {
         seed-nodes = ["akka.tcp://ClusterSys@localhost:4051"]
-        roles = []
+        roles = ["b"]
+        singleton {
+            singleton-name = "single"
+            role = "b"
+            hand-over-retry-interval = 10s
+            min-number-of-hand-over-retries = 100
+        }
+        singleton-proxy {
+            singleton-name = ${akka.cluster.singleton.singleton-name}
+            role = "b"
+            singleton-identification-interval = 1s
+            buffer-size = 100
+        }
     }
 }
